@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# recSystem
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of recSystem is to ...
+
+## Installation
+
+
+``` r
+install.packages("recSystem")
+```
+
+You can install the the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("clarencew0083/recSystem, INSTALL_opts=c("--no-multiarch"))
+
+devtools::install_github(")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(Rexis)
+## basic example code
+```
+
+
+You can lauch the shiny app using
+
+```{r pressure, eval=FALSE, include=TRUE}
+recSystem::run_my_app("recSystemApp")
+```
+
+

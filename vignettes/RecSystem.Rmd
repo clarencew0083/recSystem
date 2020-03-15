@@ -1,0 +1,21 @@
+---
+title: "RecSystem"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RecSystem}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Some great things happen in this package. What are they?
+
+```{r setup}
+library(recSystem)
+```

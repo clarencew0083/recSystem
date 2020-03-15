@@ -1,5 +1,5 @@
-#' @title  699 Credit Card Fraud data set
-#' @name psc
+#' @title  Meta Features data set
+#' @name meta_features
 #' @description 
 #' A very large dataset
 #' 
