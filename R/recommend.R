@@ -2,10 +2,10 @@
 #'
 #' @title  recommend
 #' @description Recommend a meta model for a classification dataset
-#' @param sampsize The size of the sample
-#' @param nsim     The number of simulations
+#' @param meta_features The extracted meta features of various datasets 
+#' @param recall     The known recall of the datasets in the meta_features dataframe
 #'
-#' @return A seaborn kdeplot (kernel density estimate plot)
+#' @return A collection that contains the cleaned dataframe and the reccomended algorithm as a string
 #' @export
 #' @import reticulate
 recommend <- function(meta= meta_features, metric= recall) {
@@ -20,14 +20,15 @@ recommend <- function(meta= meta_features, metric= recall) {
   return(out)
 }
 
-#' Test out running Python
 #'
-#' @title  recommend
-#' @description Recommend a meta model for a classification dataset
-#' @param sampsize The size of the sample
-#' @param nsim     The number of simulations
+#' @title  recommend_alg
+#' @description Recommend a meta model for a classification dataset. Used internally by R shiny app
+#' @param df The dataframe loaded  by the user 
+#' @param response    The target column of thedataframe loaded  by the user
+#' @param meta_features The preextracted meta features of various datasets 
+#' @param recall     The known recall of the datasets in the meta_features dataframe
 #'
-#' @return A seaborn kdeplot (kernel density estimate plot)
+#' @return The reccomended algorithm as a string
 #' @import reticulate
 recommend_alg <- function(df, response, meta= meta_features, metric= recall) {
   
@@ -42,12 +43,14 @@ recommend_alg <- function(df, response, meta= meta_features, metric= recall) {
 
 #' Test out running Python
 #'
-#' @title  recommend
-#' @description Recommend a meta model for a classification dataset
-#' @param sampsize The size of the sample
-#' @param nsim     The number of simulations
+#' @title  recommend_shiny
+#' @description Recommend a meta model for a classification dataset. Used internally by R shiny app
+#' @param df The dataframe loaded  by the user 
+#' @param response    The target column of thedataframe loaded  by the user
+#' @param meta_features The preextracted meta features of various datasets 
+#' @param recall     The known recall of the datasets in the meta_features dataframe
 #'
-#' @return A seaborn kdeplot (kernel density estimate plot)
+#' @return The cleaned dataset
 #' @import reticulate
 recommend_shiny <- function(df, response, meta= meta_features, metric= recall) {
   
@@ -61,8 +64,12 @@ recommend_shiny <- function(df, response, meta= meta_features, metric= recall) {
   
 }
 
-
-
+#' Test out running Python
+#'
+#' @title  install_sklearn
+#' @description Installs scikit-learn into reticluate python enviornment
+#' @return The cleaned dataset
+#' @import reticulate
 install_sklearn <- function(method = "auto", conda = "auto") {
   reticulate::py_install("scikit-learn", method = method, conda = conda)
 }

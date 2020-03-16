@@ -7,12 +7,12 @@
 recommend(meta = meta_features, metric = recall)
 }
 \arguments{
-\item{sampsize}{The size of the sample}
+\item{meta_features}{The extracted meta features of various datasets}
 
-\item{nsim}{The number of simulations}
+\item{recall}{The known recall of the datasets in the meta_features dataframe}
 }
 \value{
-A seaborn kdeplot (kernel density estimate plot)
+A collection that contains the cleaned dataframe and the reccomended algorithm as a string
 }
 \description{
 Recommend a meta model for a classification dataset

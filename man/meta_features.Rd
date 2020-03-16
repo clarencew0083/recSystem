@@ -3,13 +3,23 @@
 \name{meta_features}
 \alias{meta_features}
 \title{Meta Features data set}
-\format{A \code{tibble} with x rows and x columns
+\format{A dataset with 15 rows and 13 columns
 
 \describe{
-   \item{col1}{something}
-   \item{col2}{something}
-   \item{col3}{something}
+   \item{Name}{The name of a particular dataset}
+   \item{Rows}{}
+   \item{Columns}{}
+   \item{Rows-Cols Ratio}{}
+   \item{Number Discrete}{}
+   \item{Max num factors}{}
+   \item{Min num factors}{}
+   \item{Avg num factors}{}
+   \item{Number Continuous}{}
+   \item{Gradient-Avg}{}
+   \item{Gradient-Min}{}
+   \item{Gradient-Max}{}
+   \item{Gradient-Std}{}
    }}
 \description{
-A very large dataset
+A dataset containing the metafeatures of 15 datasets. These datasets are used to construct the meta model
 }

@@ -2,21 +2,22 @@
 % Please edit documentation in R/recommend.R
 \name{recommend_alg}
 \alias{recommend_alg}
-\title{recommend}
+\title{recommend_alg}
 \usage{
 recommend_alg(df, response, meta = meta_features, metric = recall)
 }
 \arguments{
-\item{sampsize}{The size of the sample}
+\item{df}{The dataframe loaded  by the user}
 
-\item{nsim}{The number of simulations}
+\item{response}{The target column of thedataframe loaded  by the user}
+
+\item{meta_features}{The preextracted meta features of various datasets}
+
+\item{recall}{The known recall of the datasets in the meta_features dataframe}
 }
 \value{
-A seaborn kdeplot (kernel density estimate plot)
+The reccomended algorithm as a string
 }
 \description{
-Recommend a meta model for a classification dataset
-}
-\details{
-Test out running Python
+Recommend a meta model for a classification dataset. Used internally by R shiny app
 }
