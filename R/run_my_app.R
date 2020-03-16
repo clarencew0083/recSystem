@@ -1,8 +1,6 @@
 #' @export
 #' @importFrom  utils View
 #' @importFrom  shiny shinyAppDir
-#' @importFrom pacman p_load
-#' @importFrom metricsgraphics metricsgraphicsOutput renderMetricsgraphics mjs_plot mjs_line mjs_labs mjs_add_css_rule mjs_add_line
 run_my_app  <-
   function(app_name = NULL, 
            theme = 'flatly',

@@ -2,7 +2,7 @@ Package: recSystem
 Type: Package
 Title: Meta Learning Recommendation System
 Version: 1.0
-Depends: R (>= 3.1.0),
+Depends: R (>= 3.6),
          reticulate
 Date: 2020-01-13
 Author: person("Clarence", "Williams", email = "clarencew3@gmail.com", role = c("aut", "cre"))
@@ -20,15 +20,9 @@ Description: This package extracts meta features from a dataset to recommend wha
   While not necessary end users should be familiar with the implemented machine learning algorithms, if they plan to implement the one recommended algorithms.
   There are no security concerns with this product and there are no design constraints.
 License: GPL (>= 2)
-Imports: rvest,
-         sys,
-         shiny, 
-         dplyr, 
-         xml2, 
-         metricsgraphics,
-         pacman,
+Imports: shiny, 
          shinythemes,
-         stats
+         sys
 RoxygenNote: 7.0.2
 LazyData: true
 Encoding: UTF-8
@@ -39,3 +33,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Remotes: github::clarencew0083/recSystem
+

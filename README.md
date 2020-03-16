@@ -20,7 +20,7 @@ You can install the the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("clarencew0083/recSystem, INSTALL_opts=c("--no-multiarch"))
+devtools::install_github("clarencew0083/recSystem", INSTALL_opts=c("--no-multiarch"))
 
 devtools::install_github(")
 ```
