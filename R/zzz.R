@@ -22,6 +22,7 @@
     #print("hi")
   
   sklearn <<- reticulate::import("sklearn", delay_load = TRUE)
+  numpy <<- reticulate::import("numpy", delay_load = TRUE)
     
   py_file = system.file("python", "python.py", package = "recSystem")
     
