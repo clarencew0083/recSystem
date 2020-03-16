@@ -96,6 +96,8 @@ In this case, choose a csv file using the file explorer and type in the name of 
   + math_placement.csv - response: courseSuccess
   + urine.csv - response: r 
   
+View documentaion of recommend function for an example.
+  
 Any dataset with a categorical response should work as well.
   
 

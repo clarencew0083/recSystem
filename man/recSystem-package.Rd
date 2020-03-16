@@ -12,11 +12,17 @@
   This meta learnening recommendation system utilizes support vector regression with a radial basis function kernel to give  the recommended algorithm for implemnation.
   
   - Additionally, this package cleans the data in the following manner:
+  
     + drop columns that have the exact same input for each row
+    
     + drop rows that have NA's
+    
     + drop object columns that have all unique values
+    
     + one hot encoding for categorical variables
+    
     + normalize continuous columns
+    
     + label encode response
 
 }
@@ -37,12 +43,15 @@ Maintainer: Clarence Williams, <clarencew3@gmail.com>
 }
 \keyword{ package }
 \seealso{
-  Optional links to other man pages
+  ?recommend
 }
 \examples{
   \dontrun{
      ## Optional simple examples of the most important functions
      ## run_my_app("recSystemApp")
-     ## recSystem::recommend()
+     ## out<- recSystem::recommend()
+     ## View(out[[1]])
+     ## print(out[[2]])
+     
   }
 }

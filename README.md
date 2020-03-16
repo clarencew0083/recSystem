@@ -28,7 +28,7 @@ recommended algorithm.
 
 ## Installation
 
-In order to install this package, Python 3.7 must be install.
+In order to install this package, Python 3.7 must be installed.
 Additionallay, numpy 1.17.4, pandas 0.25.1, and sci-kit learn 0.21.3 are
 required python packages.
 
@@ -91,5 +91,7 @@ name of the target column.
   - Two datasets are included in this package
       - math\_placement.csv - response: courseSuccess
       - urine.csv - response: r
+
+View documentaion of recommend function for an example.
 
 Any dataset with a categorical response should work as well.

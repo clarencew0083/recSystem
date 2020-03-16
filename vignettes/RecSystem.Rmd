@@ -94,6 +94,8 @@ recSystem::recommend()
 
 In this case, choose a csv file using the file explorer and type in the name of the target column.
 
+View documentaion of recommend function for an example.
+
 
 
 

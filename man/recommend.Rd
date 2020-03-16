@@ -12,8 +12,13 @@ recommend(meta = meta_features, metric = recall)
 \item{recall}{The known recall of the datasets in the meta_features dataframe}
 }
 \value{
-A collection that contains the cleaned dataframe and the reccomended algorithm as a string
+A collection that contains the cleaned dataframe and the recommended algorithm as a string
 }
 \description{
 Recommend a meta model for a classification dataset
+}
+\examples{
+out<- recommend()
+View(out[[1]])
+print(out[[2]])
 }
