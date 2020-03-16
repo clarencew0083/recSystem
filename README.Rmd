@@ -24,6 +24,7 @@ This package extracts meta features from a dataset to recommend what machine lea
 
 - Additionally, this package cleans the data in the following manner:
   + drop columns that have the exact same input for each row
+  + drop rows that have NA's
   + drop object columns that have all unique values
   + one hot encoding for categorical variables
   + normalize continuous columns
@@ -55,6 +56,9 @@ Once the package is installed, load and attach it using:
 library(recSystem)
 ## basic example code
 ```
+
+When the reticulate package is loaded, a message to download and install miniconda may appear. Select no.
+
 
 ## Example
 You can launch the shiny app using
@@ -91,6 +95,10 @@ In this case, choose a csv file using the file explorer and type in the name of 
 - Two datasets are included in this package
   + math_placement.csv - response: courseSuccess
   + urine.csv - response: r 
+  
+Any dataset with a categorical response should work as well.
+  
+
   
 
 

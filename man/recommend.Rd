@@ -17,6 +17,3 @@ A collection that contains the cleaned dataframe and the reccomended algorithm a
 \description{
 Recommend a meta model for a classification dataset
 }
-\details{
-Test out running Python
-}

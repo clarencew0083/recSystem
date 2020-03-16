@@ -3,20 +3,33 @@
 \alias{recSystem}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  Meta Learning Recommendation System
 }
 \description{
-  A more detailed description of what the package does. A length
-  of about one to five lines is recommended.
+  This package extracts meta features from a dataset to recommend what machine learning algorithm will perform the best
+  without running all the implemented machine learning algorithms.
+  The current selection of algorithms is limited to support vector machines, naiive bayes classifier and k nearest neighbors. The metric recall is used to give the recommended classifier. 
+  This meta learnening recommendation system utilizes support vector regression with a radial basis function kernel to give  the recommended algorithm for implemnation.
+  
+  - Additionally, this package cleans the data in the following manner:
+    + drop columns that have the exact same input for each row
+    + drop rows that have NA's
+    + drop object columns that have all unique values
+    + one hot encoding for categorical variables
+    + normalize continuous columns
+    + label encode response
+
 }
 \details{
-  This section should provide a more detailed overview of how to use the
-  package, including the most important functions.
+You can launch the recommend function from the console using the recommend function.
+
+You can launch the shiny app using the run_my_app function
+  
 }
 \author{
-Your Name, email optional.
+Clarence Williams, <clarencew3@gmail.com>
 
-Maintainer: Your Name <your@email.com>
+Maintainer: Clarence Williams, <clarencew3@gmail.com>
 }
 \references{
   This optional section can contain literature or other references for
@@ -29,6 +42,7 @@ Maintainer: Your Name <your@email.com>
 \examples{
   \dontrun{
      ## Optional simple examples of the most important functions
-     ## These can be in \dontrun{} and \donttest{} blocks.   
+     ## run_my_app("recSystemApp")
+     ## recSystem::recommend()
   }
 }

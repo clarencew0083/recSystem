@@ -16,6 +16,7 @@ recommended algorithm.
 
   - Additionally, this package cleans the data in the following manner:
       - drop columns that have the exact same input for each row
+      - drop rows that have NA’s
       - drop object columns that have all unique values
       - one hot encoding for categorical variables
       - normalize continuous columns
@@ -47,6 +48,9 @@ library(recSystem)
 #> Loading required package: reticulate
 ## basic example code
 ```
+
+When the reticulate package is loaded, a message to download and install
+miniconda may appear. Select no.
 
 ## Example
 
@@ -87,3 +91,5 @@ name of the target column.
   - Two datasets are included in this package
       - math\_placement.csv - response: courseSuccess
       - urine.csv - response: r
+
+Any dataset with a categorical response should work as well.

@@ -1,4 +1,3 @@
-#' Test out running Python
 #'
 #' @title  recommend
 #' @description Recommend a meta model for a classification dataset
@@ -41,7 +40,6 @@ recommend_alg <- function(df, response, meta= meta_features, metric= recall) {
   return(lst[[2]])
 }
 
-#' Test out running Python
 #'
 #' @title  recommend_shiny
 #' @description Recommend a meta model for a classification dataset. Used internally by R shiny app
@@ -64,7 +62,6 @@ recommend_shiny <- function(df, response, meta= meta_features, metric= recall) {
   
 }
 
-#' Test out running Python
 #'
 #' @title  install_sklearn
 #' @description Installs scikit-learn into reticluate python enviornment

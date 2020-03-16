@@ -21,6 +21,3 @@ The cleaned dataset
 \description{
 Recommend a meta model for a classification dataset. Used internally by R shiny app
 }
-\details{
-Test out running Python
-}

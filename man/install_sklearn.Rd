@@ -12,6 +12,3 @@ The cleaned dataset
 \description{
 Installs scikit-learn into reticluate python enviornment
 }
-\details{
-Test out running Python
-}

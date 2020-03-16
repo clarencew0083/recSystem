@@ -31,10 +31,12 @@ This package extracts meta features from a dataset to recommend what machine lea
 
 - Additionally, this package cleans the data in the following manner:
   + drop columns that have the exact same input for each row
+  + drop rows that have NA's
   + drop object columns that have all unique values
   + one hot encoding for categorical variables
   + normalize continuous columns
   + label encode response
+  
   
 
 <!-- badges: start -->
