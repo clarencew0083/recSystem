@@ -22,6 +22,7 @@ Description: This package extracts meta features from a dataset to recommend wha
 License: GPL (>= 2)
 Imports: shiny, 
          shinythemes,
+         readr,
          sys
 RoxygenNote: 7.0.2
 LazyData: true

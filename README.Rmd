@@ -46,7 +46,7 @@ You can install the the development version from [GitHub](https://github.com/) w
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("clarencew0083/recSystem", INSTALL_opts=c("--no-multiarch"))
+devtools::install_github("clarencew0083/recSystem", INSTALL_opts=c("--no-multiarch"), build_vignettes = TRUE)
 
 
 ```
@@ -99,6 +99,13 @@ In this case, choose a csv file using the file explorer and type in the name of 
 View documentaion of recommend function for an example.
   
 Any dataset with a categorical response should work as well.
+
+This documentation is also available using
+
+```{r, eval=FALSE, include=TRUE}
+vignette('recSystem')
+```
+
   
 
   

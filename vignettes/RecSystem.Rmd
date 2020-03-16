@@ -1,5 +1,5 @@
 ---
-title: "RecSystem"
+title: "recSystem"
 output: rmarkdown::html_vignette
 bibliography: bib.bib
 vignette: >

@@ -44,6 +44,7 @@ Maintainer: Clarence Williams, <clarencew3@gmail.com>
 \keyword{ package }
 \seealso{
   ?recommend
+  vignette('recSystem')
 }
 \examples{
   \dontrun{

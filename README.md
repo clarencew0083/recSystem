@@ -28,7 +28,7 @@ recommended algorithm.
 
 ## Installation
 
-In order to install this package, Python 3.7 must be installed.
+In order to install this package, Python 3.7 must be install.
 Additionallay, numpy 1.17.4, pandas 0.25.1, and sci-kit learn 0.21.3 are
 required python packages.
 
@@ -37,7 +37,7 @@ You can install the the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("clarencew0083/recSystem", INSTALL_opts=c("--no-multiarch"))
+devtools::install_github("clarencew0083/recSystem", INSTALL_opts=c("--no-multiarch"), build_vignettes = TRUE)
 
 ```
 
@@ -95,3 +95,9 @@ name of the target column.
 View documentaion of recommend function for an example.
 
 Any dataset with a categorical response should work as well.
+
+This documentation is also available using
+
+``` r
+vignette('recSystem')
+```
