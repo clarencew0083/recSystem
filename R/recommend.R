@@ -1,6 +1,6 @@
 #'
 #' @title  recommend
-#' @description Recommend a meta model for a classification dataset
+#' @description Recommend a meta model for a classification dataset. Dataset is selected using dialog
 #' @param meta_features The extracted meta features of various datasets 
 #' @param recall     The known recall of the datasets in the meta_features dataframe
 #'
@@ -15,6 +15,28 @@ recommend <- function(meta= meta_features, metric= recall) {
   
   df <- readr::read_csv(file.choose())
   response <- readline(prompt="Enter name of response column: ")
+  out <- py$rec_sys(df, response, meta_features, recall)
+  paste("Reccomended algoritm: ", out[[2]])
+  return(out)
+}
+
+#'
+#' @title  recommend2
+#' @description Recommend a meta model for a classification dataset
+#' @param  df Dataset in tabular form
+#' @param response The target column of the dataset
+#' @param meta_features The extracted meta features of various datasets 
+#' @param recall     The known recall of the datasets in the meta_features dataframe
+#'
+#' @return A collection that contains the cleaned dataframe and the recommended algorithm as a string
+#' @export
+#' @import reticulate
+#' @examples 
+#' out<- recommend2(math_placement, "CourseSuccess")
+#' View(out[[1]])
+#' print(out[[2]])
+recommend2 <- function(df, response, meta= meta_features, metric= recall) {
+  
   out <- py$rec_sys(df, response, meta_features, recall)
   paste("Reccomended algoritm: ", out[[2]])
   return(out)

@@ -96,6 +96,15 @@ View documentaion of recommend function for an example.
 
 Any dataset with a categorical response should work as well.
 
+Alternatively, use the function recommend2 to use the presupplied
+datasets
+
+``` r
+out<- recommend2(math_placement, "CourseSuccess")
+View(out[[1]])
+print(out[[2]])
+```
+
 This documentation is also available using
 
 ``` r
