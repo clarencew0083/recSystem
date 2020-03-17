@@ -198,8 +198,17 @@ In phase 2 of the meta learning recommendation system, the following steps occur
 \[r'  = argmax(v(\widehat{f (x')}))\].
 
 
-
 # References
+
+Cui, Can, Mengqi Hu, Jeffery D. Weir, and Teresa Wu. 2016. “A Recommendation System for Meta-Modeling: A Meta-Learning based Approach.” Expert Systems with Applications 46: 33–44.
+
+Rice, John. 1975. “The Algorithm Selection Problem.” Purdue University, Department of Computer Science Technical Reports, Paper 99.
+
+Williams, Clarence. 2020. “Meta Learning Recommendation System for Classification.” Master’s thesis, Wright-Patterson AFB, OH: School of Engineering; Management, Air Force Institute of Technology (AU).
+
+Woods, Megan. 2020. “A Metamodel Recommendation System using Meta-Learning.” Master’s thesis, Wright-Patterson AFB, OH: School of Engineering; Management, Air Force Institute of Technology (AU).
+
+
 
 
 
