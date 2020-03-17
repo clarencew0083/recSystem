@@ -121,7 +121,7 @@ View documentaion of the recommend and recommend2 functions for examples.
 
 The recSystem package is an implementation of @Williams Master's thesis. 
 
-If you are curious as to what exactly is going on under the hood, the next picture @Woods may shed some light.
+If you are curious as to what exactly is going on under the hood, the next picture from @Woods may shed some light.
 
 <img src="images/Slide14.PNG" alt="Screenshot Example" class="center">
 
@@ -139,7 +139,7 @@ The meta learning recommendation system for classification problems consists of 
 
     The recall dataset included with this package contains the algorithm performance described within this step.
 
-1. **Recommendation**
+1. **Actual Performance**
     
     Each algorithm has its performance ranked when applied to each  datasets in the problem space. This ranking is repeated    for each performance metric to give a separate ranking for each metric. 
 
@@ -185,7 +185,7 @@ In phase 2 of the meta learning recommendation system, the following steps occur
 
 3. **Meta Learning**
 
-    A new dataset is formed where each row is the collection of the 12 meta features extracted from one dataset of the six datasets. These twelve features together form the feature space \(F\). 
+    A new dataset is formed where each row is the collection of the 12 meta features extracted each dataset in the prblem space. These twelve features together form the feature space \(F\). 
 
 4. **Recommendation System Construction**
 
@@ -193,9 +193,11 @@ In phase 2 of the meta learning recommendation system, the following steps occur
 
 5. **Performance Prediction and Recommendation**
 
-    The recommendation system predicts the performance of the machine learning algorithms K Nearest Neighbors, Support Vector Machines and Naive Bayes Classifier for each member of the problem space. Each algorithm, \(a \in A\) , has its performance ranked when applied to each of thedatasets in the problem space. This ranking is repeated for each performance metric to give separate rankings. Similar to phase one, when using recall  is the performance metric, the best algorithm is the one with the largest value, that is the recommendation \(r’\) is   
+    The recommendation system predicts the performance of the machine learning algorithms K Nearest Neighbors, Support Vector Machines and Naive Bayes Classifier for each member of the problem space. Each algorithm, \(a \in A\) , has its performance ranked when applied to each of thedatasets in the problem space. This ranking is repeated for each performance metric to give separate rankings. Similar to phase one, when using recall as the performance metric, the best algorithm is the one with the largest value, that is the recommendation \(r’\) is   
 
 \[r'  = argmax(v(\widehat{f (x')}))\].
+
+    The algorithm returned by the recommend function in this package is \(r'\)
 
 
 # References
