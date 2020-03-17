@@ -197,7 +197,7 @@ In phase 2 of the meta learning recommendation system, the following steps occur
 
 \[r'  = argmax(v(\widehat{f (x')}))\].
 
-    The algorithm returned by the recommend function in this package is \(r'\)
+The algorithm returned by the recommend function in this package is \(r'\)
 
 
 # References
