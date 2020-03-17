@@ -1,0 +1,43 @@
+---
+title: "recSystem Review: Walton"
+output: html_document
+---
+
+Accuracy
+    
+  - Are the results accurate?
+  
+      *Reviewer: First off - well done! This was an ambitious package-build. I have zero competency with python, but I felt like I was able to get up-to-speed rather quickly.*
+      
+  - Is it clear how the results were computed?
+  
+      *Reviewer:  Yes, it was very clear. The documentation was spot-on, and I was able to follow what the developer set out to accomplish. *
+      
+Compilation
+    
+  - Did the analytic work? (i.e. install correctly, startup
+        correctly)
+        
+      *Reviewer: Not at first. At first use, I skimmed the README and just downloaded the package, which threw an error. I then took the time to read the README and discovered I needed python first, which I did not have, nor have any experience with. It did take me awhile to figure out how to get python up and running on my machine, and I wish the README had a little more instruction on getting python setup. However, a few google searches later I was set. After getting python, I was able to download the package no problem.*
+        
+  - Were errors encountered when executing code according to the
+        documentation?
+        
+      *Reviewer:  Yes, but those errors were user errors. After downloading python and loading all the required python packages, I had issues getting "pandas" to load correctly. Python says I had downloaded the pandas package correctly, but when I try to run the app, I get an error saying pandas is not installed. I am unable to proceed past this point. However, this is a user issue, not a developer issue. I have zero experience with python. For a user who has python experience, I doubt they would have this issue.*
+
+Ease of use
+    
+  - Is it clear how to use the analytic? (i.e. is the documentation
+        clear)
+        
+      *Reviewer: As I was not able to properly install python, I was not able to test and use the package as intended. However, the developer created an excellent README (seriously - better than some CRAN packages). I was able to follow the README step-by-step, and really felt like I was using the package just by reading. Therefore, it was abundantly clear how to use the package.*
+        
+  - Are the visualizations/plots interpretable?
+  
+      *Reviewer: Yes, very clear. As stated prior, I could only see these plots via the README file. All plots seem interpretable by anyone.*
+      
+Final Grade
+
+  - Please provide a final grade
+
+      *Reviewer: After reviewing the package and the provided rubric, my recommendation is a grade of 50/50 - Outstanding. The developer put some serious time into this package - not just the package itself, but the documentation too. In my opinion, good documentation makes or breaks a package. This developer's documentation is a level above, and therefore elevates this package to an elite level. I just wish I knew python better so I could have fixed the issues I was having. Me not being able to fully experience the package is in no way a mark against the developer. Great job!*
