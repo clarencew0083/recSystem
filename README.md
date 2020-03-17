@@ -105,7 +105,8 @@ View(out[[1]])
 print(out[[2]])
 ```
 
-This documentation is also available using
+More detailed documentation about what is happening under the hood is
+available using
 
 ``` r
 vignette('recSystem')

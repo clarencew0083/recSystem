@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
 # recSystem
 
 # Overview
@@ -108,7 +110,7 @@ View(out[[1]])
 print(out[[2]])
 ```
 
-This documentation is also available using
+More detailed documentation about what is happening under the hood is available using
 
 ```{r, eval=FALSE, include=TRUE}
 vignette('recSystem')

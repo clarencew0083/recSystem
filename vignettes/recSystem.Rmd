@@ -2,13 +2,21 @@
 title: "recSystem"
 output: rmarkdown::html_vignette
 bibliography: bib.bib
+css: 'css/style.css'
 vignette: >
   %\VignetteIndexEntry{recSystem}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+</style>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -20,13 +28,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
+
 # Meta Learning Recommendation System
 
 ## Overview
 
 This package extracts meta features from a dataset to recommend what machine learning algorithm will perform the best
   without running all the implemented machine learning algorithms.
-  The current selection of algorithms is limited to support vector machines, naiive bayes classifier and k nearest neighbors. The metric recall isused to give the recommended classifier. 
+  The current selection of algorithms is limited to support vector machines, naiive bayes classifier and \(k\) nearest neighbors. The metric recall isused to give the recommended classifier. 
   The meta learner utilizes support vector regression with a radial basis function kernel to predict the recommended algorithm.
 
 - Additionally, this package cleans the data in the following manner:
@@ -71,14 +82,14 @@ recSystem::run_my_app("recSystemApp")
 
 When lauching the app the following screen will appear:
 
-<img src="images/app1.PNG" alt="Screenshot Example">
+<img src="images/app1.PNG" alt="Screenshot Example" class="center">
 
 - Click the browse button to upload a csv file.
 - Once the file is uploaded it will be displayed on the screen.
 - Select the target column using the drop-down
 - Click Go! to get the recommended classification algorithm for your chosen dataset 
 
-<img src="images/app2.PNG" alt="Screenshot Example">
+<img src="images/app2.PNG" alt="Screenshot Example" class="center">
 
 - The recommended classfication algorithm is displayed in bold
 - Click the download button to download the cleaned dataset if desired
@@ -105,6 +116,90 @@ print(out[[2]])
 
 
 View documentaion of the recommend and recommend2 functions for examples.
+
+# Background Information
+
+The recSystem package is an implementation of @Williams Master's thesis. 
+
+If you are curious as to what exactly is going on under the hood, the next picture @Woods may shed some light.
+
+<img src="images/Slide14.PNG" alt="Screenshot Example" class="center">
+
+The Meta Learning Recommendation framework was first proposed by  @Cui et al and is a modification of the  model from  @Rice. The framewoek is further refined in the AFIT Masters’ Thesis of Megan Woods @Woods.	It extracts the meta features \(f\) of members of the problem space \(P\). 
+
+The meta learning recommendation system for classification problems consists of two phases. The steps of phase one are as  follows:
+
+1. **Candidate Problem Space**
+
+    The Candidate Problem space \(C\) is all problems suitable for classification. Since this set is large, it is     subsetted   to form the problem space \(P\) which contains the problems under study.
+
+1. **Algorithm Prediction Space**
+
+    The machine learning algorithms K Nearest Neighbors, Support Vector Machines and Naive Bayes Classifier form the     algorithm space \(A\). The three algorithms are subsequently applied to each member of the problem space with  recall being the performance metric captured for each dataset. 
+
+    The recall dataset included with this package contains the algorithm performance described within this step.
+
+1. **Recommendation**
+    
+    Each algorithm has its performance ranked when applied to each  datasets in the problem space. This ranking is repeated    for each performance metric to give a separate ranking for each metric. 
+
+    When recall is the performance metric, the best algorithm is the one with the largest value. In this case, the best        algorithm \(r\) is given by
+ 
+\[r = argmax_{a∈A}(z(a(x))) \].
+
+
+In phase 2 of the meta learning recommendation system, the following steps occur:
+
+1. **New Candidate Problem**
+
+    A new problem \(c'\) is selected. This is the dataset chosen by the user when calling the various recommend functions of this package.
+
+2. **Meta Feature Extraction**
+
+    Each of the members of the problem space have information extracted to provide information about it’s structure.  The following meta features are   extracted:
+
+    -	Number of Rows
+
+    -	Number  of Columns
+
+    -	Rows to Columns Ratio
+
+    -	Number of Discrete Columns
+
+    -	Maximum number of factors among discrete columns
+
+    -	Minimum number of factors among discrete columns
+
+    -	Average number of factors among discrete columns
+
+    -	Number of continuous columns
+
+    -	Gradient average
+
+    -	Gradient minimum
+
+    -	Gradient maximum
+
+    -	Gradient standard deviation
+
+
+3. **Meta Learning**
+
+    A new dataset is formed where each row is the collection of the 12 meta features extracted from one dataset of the six datasets. These twelve features together form the feature space \(F\). 
+
+4. **Recommendation System Construction**
+
+    Support Vector Regression is the meta learner that trains the recommendation system using the meta features as inputs with a metric of the performance space for each algorithm as output.
+
+5. **Performance Prediction and Recommendation**
+
+    The recommendation system predicts the performance of the machine learning algorithms K Nearest Neighbors, Support Vector Machines and Naive Bayes Classifier for each member of the problem space. Each algorithm, \(a \in A\) , has its performance ranked when applied to each of thedatasets in the problem space. This ranking is repeated for each performance metric to give separate rankings. Similar to phase one, when using recall  is the performance metric, the best algorithm is the one with the largest value, that is the recommendation \(r’\) is   
+
+\[r'  = argmax(v(\widehat{f (x')}))\].
+
+
+
+# References
 
 
 
